@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import url(font.css);
+
+html {font-size: 10px; font-family: 'Pretendard-Regular';}
+
+body {
+    --mainC1 : #E9E3D7;
+    --mainC2 : #AF7777;
+    --mainC3 : #562E20;
+    
+    --pointC1 : #EE998D;
+    --pointC2 : #3D2A2A;
+
+    --txtC1 : #f5f5f5;
+    --txtC2 : #8C8C8C;
+    --txtC3 : #686868;
+    --txtC4 : #866650;
+    --txtC5 : #834521;
+    --txtC6 : #562E20;
+    --txtC7 : #915635;
+
+    --white : #f5f5f5;
+    --black : #252525;
+    --lightgray : #DCD6D1;
+    --lightgray2 : #686868;
+}
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+img {display: block;}
+/* comm */
+h2 {font-size: 4rem; font-family: 'Pretendard-SemiBold'; color: var(--txtC5);}/* section-title */
+.desc {font-size: 2.6rem; font-family: 'Pretendard-Light'; color: var(--txtC4);}/* section-txt */
+/* button */
+.btn {width: 20rem; height: 5em; border-radius: 5rem; text-align: center; display: flex; justify-content: center;}
+.btn-txt {display: inline-block; padding: 1.4rem 3rem; font-size: 2.4rem; font-family: 'Pretendard-Regular'; line-height: 2.2rem;}
+/* size */
+body {width: 100%; background: var(--white);}
+.centerbox {width: 125rem; margin: 0 auto;}
+
+/* header 헤더 */
+header {box-shadow: 0 0.5rem 1rem rgb(134, 102, 80, 0.2)}
+/* 상단 광고 */
+.toppop {height: 4.2rem; background: var(--mainC2);}
+.toppop .centerbox {height: 100%; display: flex; align-items: center; justify-content: flex-start;}
+.toppop .centerbox > a {font-size: 1.6rem; color: var(--txtC1);}
+.toppop .centerbox > a span {font-family: 'Pretendard-SemiBold';}
+/* 상단 로고, 카테고리, 아이콘 */
+.topmenu {height: 7rem; background: var(--white); border-bottom: 0.1rem solid var(--lightgray); box-sizing: border-box;}
+.topmenu .centerbox {height: 100%; display: flex; align-items: center; justify-content: space-between;}
+.topmenu .centerbox nav .gnb {display: flex; align-items: center;}
+.topmenu .centerbox nav .gnb li a {padding: 2.5rem; font-size: 1.8rem; color: var(--mainC2);}
+.topmenu .centerbox nav .gnb li:nth-child(1) a {font-family: 'Pretendard-SemiBold'; color: var(--mainC3);}
+.topmenu .centerbox .icon {display: flex; align-items: center; gap: 2rem;}
+/* 세부 카테고리*/
+.topsub {height: 4rem; background: var(--white);}
+.topsub .centerbox {height: 100%; display: flex; justify-content: center; align-items: center;}
+.topsub .centerbox nav .sub-gnb {display: flex; align-items: center; justify-content: center;}
+.topsub .centerbox nav .sub-gnb li a {padding: 1rem 4rem; font-size: 1.6rem; color: var(--txtC3);}
+
+/* section 섹션 디자인 */
+section {display: flex; flex-direction: column; gap: 20rem;}
+
+/* banner 광고 배너 */
+.banner {height: 70rem; background: url(../img/banner.png) no-repeat center;}
+.banner .centerbox {height: 100%; padding: 10rem; box-sizing: border-box}
+.banner-wrap {display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 2.5rem; text-align: center;}
+.banner-wrap .banner-subtit {color: var(--mainC2); font-size: 26px; font-family: 'Pretendard-Medium';}
+.banner-wrap .banner-tit {color: var(--txtC5);}
+.banner-wrap .banner-txt {color: var(--txtC2); font-size: 2.4rem;}
+.banner-wrap .btn {background: var(--pointC1);}
+.banner-wrap .btn .btn-txt {color: var(--txtC1);}
+
+/* product 상품 카테고리 안내 */
+.product {height: 85rem;background: var(--mainC1); border-radius: 0 25rem 0 0;}
+.product .centerbox {height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;}
+/* product-wrap 타이틀 묶음 */
+.product-wrap {margin-top: 10rem; text-align: center; display: flex; flex-direction: column; gap: 2.5rem;}
+/* product-sec 컨텐츠 섹션 */
+.product-sec {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 5rem;}
+.product-contents {display: flex; flex-direction: column; gap: 5rem; align-items: flex-start;}
+.product-content {display: flex; flex-direction: column; gap: 2.5rem;}
+.product-img {width: 37.6rem; height: 31.4rem; display: block; ;border-radius: 1.5rem; overflow: hidden; outline: 0.25rem solid var(--white); outline-offset: -0.25rem;}
+/* section .product .centerbox .product-sec .product-contents .product-content .product-img:before {content: ""; position: absolute; width: 100%;height: 100%; box-shadow: inset 0 0 1em rgb(134, 102, 80, 0.5);} 
+before/after 기능은 컨텐츠의 앞/뒤로 꾸며주는 요소를 넣을 때 사용된다.*/
+.product-content .content-tit {font-size: 2.4rem; color: var(--txtC5); font-family: "Pretendard-SemiBold"; }
+.product-content .content-txt {font-size: 1.8rem; color: var(--txtC3); font-family: "Pretendard-Light"; line-height: 2.8rem;}
+/* product-href 카테고리 바로가기 */
+.product-href {display: flex; align-items: center; gap: 1rem;}
+.product-href a {font-size: 1.8rem; color: var(--mainC2);}
+.product-btn {all: unset; width: 1.8rem; height: 1.8rem; background: url(../img/Right-c1.svg) no-repeat center;}
+
+/* story 주방 스토리 */
+.story {display: flex; flex-direction: column; margin-bottom: 20rem;}
+/* story-wrap 스토리 타이틀 묶음 */
+.story-wrap {display: flex; flex-direction: column; text-align: center; gap: 2.5rem;}
+/* story-img 스토리 이미지 묶음 */
+.story-img {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 5rem;}
+.story-img figure {box-shadow: 0 1rem 1rem rgb(134, 102, 80, 0.2);}
+
+/* terrace 아웃도어 상품 광고 */
+.terrace {height: 58rem; background: var(--mainC1); margin-bottom: 20rem;}
+.terrace .centerbox {height: 100%; display: flex; align-items: center; justify-content: space-between;}
+
+/* terrace-wrap 아웃도어 타이틀 묶음 */
+.terrace-wrap {display: flex; flex-direction: column; justify-content: flex-start; gap: 2.5rem;}
+.terrace-txt {line-height: 3.8rem;}
+.terrace-wrap .btn {margin-top: 2.5rem; background: var(--txtC5);}
+.terrace-wrap .btn .btn-txt {color: var(--txtC1);}
+/* terrace-sec 아웃도어 컨텐츠 묶음 */
+.terrace-sec {}
+/* terrace-img 아웃도어 이미지 */
+.terrace-img {position: relative; width: 50rem; height: 35rem; background: url(../img/terrace.png) no-repeat center;}
+.terrace-img .terrace-slide {position: absolute; bottom: 1rem; left: 50%; transform: translate(-50%, 0);}
+.terrace-img .terrace-stop {position: absolute; bottom: 1rem; right: 1rem;}
+/* terrace-href 인테리어 가이드 보러가기 */
+.terrace-href {margin-top: 1rem; display: flex; align-items: center; gap: 1rem;}
+.terrace-href a {font-size: 1.8rem; color: var(--txtC4);}
+.terrace-href .terrace-btn {all: unset; width: 1.8rem; height: 1.8rem; background: url(../img/Right-c2.svg) no-repeat center;}
