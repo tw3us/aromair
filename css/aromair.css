@@ -10,6 +10,8 @@ body {
     
     --pointC1 : #EE998D;
     --pointC2 : #3D2A2A;
+    --pointC3 : #694747;
+    --pointC4 : #3D2A2A;
 
     --txtC1 : #f5f5f5;
     --txtC2 : #8C8C8C;
@@ -34,8 +36,8 @@ img {display: block;}
 h2 {font-size: 4rem; font-family: 'Pretendard-SemiBold'; color: var(--txtC5);}/* section-title */
 .desc {font-size: 2.6rem; font-family: 'Pretendard-Light'; color: var(--txtC4);}/* section-txt */
 /* button */
-.btn {width: 20rem; height: 5em; border-radius: 5rem; text-align: center; display: flex; justify-content: center;}
-.btn-txt {display: inline-block; padding: 1.4rem 3rem; font-size: 2.4rem; font-family: 'Pretendard-Regular'; line-height: 2.2rem;}
+.btn {height: 5em; border-radius: 5rem; text-align: center; display: flex; justify-content: center; outline: 0.2rem solid var(--pointC3); outline-offset: -0.2rem; transition: 0.5s ease-in-out; width: fit-content;}
+.btn-txt {display: flex; justify-content: center; align-items: center; padding: 1rem 4rem; font-size: 2rem; font-family: 'Pretendard-Regular'; line-height: 2.2rem;}
 /* size */
 body {width: 100%; background: var(--white);}
 .centerbox {width: 125rem; margin: 0 auto;}
@@ -70,8 +72,9 @@ section {display: flex; flex-direction: column; gap: 20rem;}
 .banner-wrap .banner-subtit {color: var(--mainC2); font-size: 26px; font-family: 'Pretendard-Medium';}
 .banner-wrap .banner-tit {color: var(--txtC5);}
 .banner-wrap .banner-txt {color: var(--txtC2); font-size: 2.4rem;}
-.banner-wrap .btn {background: var(--pointC1);}
-.banner-wrap .btn .btn-txt {color: var(--txtC1);}
+.banner-wrap .btn:hover {background: var(--pointC3);}
+.banner-wrap .btn .btn-txt {color: var(--pointC3);}
+.banner-wrap .btn:hover .btn-txt {color: var(--txtC1);}
 
 /* product 상품 카테고리 안내 */
 .product {height: 85rem;background: var(--mainC1); border-radius: 0 25rem 0 0;}
@@ -90,7 +93,7 @@ before/after 기능은 컨텐츠의 앞/뒤로 꾸며주는 요소를 넣을 때
 /* product-href 카테고리 바로가기 */
 .product-href {display: flex; align-items: center; gap: 1rem;}
 .product-href a {font-size: 1.8rem; color: var(--mainC2);}
-.product-btn {all: unset; width: 1.8rem; height: 1.8rem; background: url(../img/Right-c1.svg) no-repeat center;}
+.product-btn {all: unset; width: 2rem; height: 2rem; background: url(../img/Right-c1.svg) no-repeat center;}
 
 /* story 주방 스토리 */
 .story {display: flex; flex-direction: column; margin-bottom: 20rem;}
@@ -107,8 +110,10 @@ before/after 기능은 컨텐츠의 앞/뒤로 꾸며주는 요소를 넣을 때
 /* terrace-wrap 아웃도어 타이틀 묶음 */
 .terrace-wrap {display: flex; flex-direction: column; justify-content: flex-start; gap: 2.5rem;}
 .terrace-txt {line-height: 3.8rem;}
-.terrace-wrap .btn {margin-top: 2.5rem; background: var(--txtC5);}
-.terrace-wrap .btn .btn-txt {color: var(--txtC1);}
+.terrace-wrap .btn {margin-top: 2.5rem;}
+.terrace-wrap .btn:hover {background: var(--pointC4);}
+.terrace-wrap .btn .btn-txt {color: var(--pointC4);}
+.terrace-wrap .btn:hover .btn-txt {color: var(--txtC1);}
 /* terrace-sec 아웃도어 컨텐츠 묶음 */
 .terrace-sec {}
 /* terrace-img 아웃도어 이미지 */
@@ -118,4 +123,35 @@ before/after 기능은 컨텐츠의 앞/뒤로 꾸며주는 요소를 넣을 때
 /* terrace-href 인테리어 가이드 보러가기 */
 .terrace-href {margin-top: 1rem; display: flex; align-items: center; gap: 1rem;}
 .terrace-href a {font-size: 1.8rem; color: var(--txtC4);}
-.terrace-href .terrace-btn {all: unset; width: 1.8rem; height: 1.8rem; background: url(../img/Right-c2.svg) no-repeat center;}
+.terrace-href .terrace-btn {all: unset; width: 2rem; height: 2rem; background: url(../img/Right-c2.svg) no-repeat center;}
+/* inspiration 스타일 가이드 배너 */
+.inspiration {height: 108rem; background: url(../img/inspiration.png) no-repeat center;}
+.inspiration .centerbox {height: 100%;}
+.inspiration-wrap {margin-top: 10rem; display: flex; flex-direction: column; gap: 25px;}
+
+.inspiration-subtit {font-size: 2.6rem; font-family: 'Pretendard-Medium'; color: var(--txtC1);}
+.inspiration-tit {color: var(--txtC1);}
+.inspiration-txt {font-size: 2.6rem; color: var(--txtC1); font-family: 'Pretendard-Light';}
+
+.inspiration .centerbox .btn {margin-top: 5rem; outline: 0.2rem solid var(--pointC4);}
+.inspiration .centerbox .btn:hover {background: var(--pointC4);}
+.inspiration .centerbox .btn a {color: var(--pointC4);}
+.inspiration .centerbox .btn:hover a {color: var(--txtC1);}
+
+.sofa-wrap {display: flex; flex-direction: column; gap: 2.5rem; align-items: center;}
+
+.sofa-top {display: flex;}
+.sofa-wrap .sofa-tit {font-size: 4rem; font-family: 'Pretendard-Bold'; color: var(--txtC5); text-align: center;}
+
+.sofa-colors {display: flex; gap: 10px; align-items: center; }
+.sofa-color {width: 2rem; height: 2rem; outline: 1px solid red;}
+
+/*  
+NOTE: @:has(~) - @의 자식요소에 ~가 있으면 적용되는 css
+.sofa-colors > li:has(img) {outline: 1px solid blue;}
+*/
+
+.sofa-colors:last-child img {width: 1rem; height: 1rem;}
+.sofa-wrap .sofa-txt {font-size: 2.6rem; font-family: 'Pretendard-Light'; color: var(--txtC7); text-align: center;}
+
+.sofa-sec {height: 105rem; background: var(--mainC1); border-radius:  150rem 150rem 0 0;}
