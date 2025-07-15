@@ -20,6 +20,7 @@ body {
     --txtC5 : #834521;
     --txtC6 : #562E20;
     --txtC7 : #915635;
+    --txtC8 : #565656;
 
     --white : #f5f5f5;
     --black : #252525;
@@ -36,8 +37,9 @@ img {display: block;}
 h2 {font-size: 4rem; font-family: 'Pretendard-SemiBold'; color: var(--txtC5);}/* section-title */
 .desc {font-size: 2.6rem; font-family: 'Pretendard-Light'; color: var(--txtC4);}/* section-txt */
 /* button */
-.btn {height: 5em; border-radius: 5rem; text-align: center; display: flex; justify-content: center; outline: 0.2rem solid var(--pointC3); outline-offset: -0.2rem; transition: 0.5s ease-in-out; width: fit-content;}
-.btn-txt {display: flex; justify-content: center; align-items: center; padding: 1rem 4rem; font-size: 2rem; font-family: 'Pretendard-Regular'; line-height: 2.2rem;}
+.href-btn {padding: 1.5rem 5rem; border-radius: 5rem; outline: 0.2rem solid; outline-color: var(--pointC3); outline-offset: -0.2rem; transition: 0.5s ease-in-out; width: fit-content;
+font-size: 2rem; font-family: 'Pretendard-Regular'; line-height: 2.2rem; background: none; color: var(--pointC3); cursor: pointer;}
+
 /* size */
 body {width: 100%; background: var(--white);}
 .centerbox {width: 125rem; margin: 0 auto;}
@@ -66,92 +68,156 @@ header {box-shadow: 0 0.5rem 1rem rgb(134, 102, 80, 0.2)}
 section {display: flex; flex-direction: column; gap: 20rem;}
 
 /* banner 광고 배너 */
-.banner {height: 70rem; background: url(../img/banner.png) no-repeat center;}
+.banner {height: 70rem; background: url(../img/banner.png) no-repeat center; position: relative;}
 .banner .centerbox {height: 100%; padding: 10rem; box-sizing: border-box}
 .banner-wrap {display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 2.5rem; text-align: center;}
 .banner-wrap .banner-subtit {color: var(--mainC2); font-size: 26px; font-family: 'Pretendard-Medium';}
 .banner-wrap .banner-tit {color: var(--txtC5);}
 .banner-wrap .banner-txt {color: var(--txtC2); font-size: 2.4rem;}
-.banner-wrap .btn:hover {background: var(--pointC3);}
-.banner-wrap .btn .btn-txt {color: var(--pointC3);}
-.banner-wrap .btn:hover .btn-txt {color: var(--txtC1);}
 
+.banner .href-btn {position: absolute; top: 65%; left: 50%; transform: translateX(-50%)}
+.banner .href-btn:hover {background: var(--pointC3); color: var(--txtC1);}
 /* product 상품 카테고리 안내 */
 .product {height: 85rem;background: var(--mainC1); border-radius: 0 25rem 0 0;}
-.product .centerbox {height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;}
+.product .centerbox {height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 7.5rem;}
 /* product-wrap 타이틀 묶음 */
 .product-wrap {margin-top: 10rem; text-align: center; display: flex; flex-direction: column; gap: 2.5rem;}
 /* product-sec 컨텐츠 섹션 */
-.product-sec {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 5rem;}
-.product-contents {display: flex; flex-direction: column; gap: 5rem; align-items: flex-start;}
-.product-content {display: flex; flex-direction: column; gap: 2.5rem;}
+.product-sec {width: 100%; display: flex; align-items: center; justify-content: space-between;}
+.product-contents {display: flex; flex-direction: column; gap: 2.5rem; align-items: flex-start;}
+.product-content {display: flex; flex-direction: column; gap: 2rem;}
 .product-img {width: 37.6rem; height: 31.4rem; display: block; ;border-radius: 1.5rem; overflow: hidden; outline: 0.25rem solid var(--white); outline-offset: -0.25rem;}
-/* section .product .centerbox .product-sec .product-contents .product-content .product-img:before {content: ""; position: absolute; width: 100%;height: 100%; box-shadow: inset 0 0 1em rgb(134, 102, 80, 0.5);} 
-before/after 기능은 컨텐츠의 앞/뒤로 꾸며주는 요소를 넣을 때 사용된다.*/
+/* 
+
+section .product .centerbox .product-sec .product-contents .product-content .product-img:before {content: ""; position: absolute; width: 100%;height: 100%; box-shadow: inset 0 0 1em rgb(134, 102, 80, 0.5);} 
+before/after 기능은 컨텐츠의 앞/뒤로 꾸며주는 요소를 넣을 때 사용된다.
+
+*/
 .product-content .content-tit {font-size: 2.4rem; color: var(--txtC5); font-family: "Pretendard-SemiBold"; }
-.product-content .content-txt {font-size: 1.8rem; color: var(--txtC3); font-family: "Pretendard-Light"; line-height: 2.8rem;}
+.product-content .content-txt {font-size: 1.6rem; color: var(--txtC3); font-family: "Pretendard-Light"; line-height: 2.8rem;}
 /* product-href 카테고리 바로가기 */
 .product-href {display: flex; align-items: center; gap: 1rem;}
 .product-href a {font-size: 1.8rem; color: var(--mainC2);}
 .product-btn {all: unset; width: 2rem; height: 2rem; background: url(../img/Right-c1.svg) no-repeat center;}
 
 /* story 주방 스토리 */
-.story {display: flex; flex-direction: column; margin-bottom: 20rem;}
+.story {display: flex; flex-direction: column; gap: 7.5rem;}
 /* story-wrap 스토리 타이틀 묶음 */
 .story-wrap {display: flex; flex-direction: column; text-align: center; gap: 2.5rem;}
 /* story-img 스토리 이미지 묶음 */
-.story-img {width: 100%; display: flex; align-items: center; justify-content: space-between; margin-top: 5rem;}
+.story-img {width: 100%; display: flex; align-items: center; justify-content: space-between;}
 .story-img figure {box-shadow: 0 1rem 1rem rgb(134, 102, 80, 0.2);}
 
 /* terrace 아웃도어 상품 광고 */
-.terrace {height: 58rem; background: var(--mainC1); margin-bottom: 20rem;}
-.terrace .centerbox {height: 100%; display: flex; align-items: center; justify-content: space-between;}
+.terrace {height: 58rem; background: var(--mainC1);}
+.terrace .centerbox {height: 100%; display: flex; position: relative; box-sizing: border-box; padding: 10rem 0 0; justify-content: space-between;}
 
 /* terrace-wrap 아웃도어 타이틀 묶음 */
-.terrace-wrap {display: flex; flex-direction: column; justify-content: flex-start; gap: 2.5rem;}
+.terrace-wrap {display: flex; flex-direction: column; gap: 2.5rem;}
 .terrace-txt {line-height: 3.8rem;}
-.terrace-wrap .btn {margin-top: 2.5rem;}
-.terrace-wrap .btn:hover {background: var(--pointC4);}
-.terrace-wrap .btn .btn-txt {color: var(--pointC4);}
-.terrace-wrap .btn:hover .btn-txt {color: var(--txtC1);}
-/* terrace-sec 아웃도어 컨텐츠 묶음 */
-.terrace-sec {}
+
+/* terrace-wrap 아웃도어 버튼 */
+.terrace .centerbox .href-btn {position: absolute; top: 70%; outline-color: var(--txtC5); color: var(--txtC5);}
+.terrace .centerbox .href-btn:hover {background: var(--txtC5); color: var(--txtC1);}
+
 /* terrace-img 아웃도어 이미지 */
 .terrace-img {position: relative; width: 50rem; height: 35rem; background: url(../img/terrace.png) no-repeat center;}
 .terrace-img .terrace-slide {position: absolute; bottom: 1rem; left: 50%; transform: translate(-50%, 0);}
 .terrace-img .terrace-stop {position: absolute; bottom: 1rem; right: 1rem;}
+
 /* terrace-href 인테리어 가이드 보러가기 */
 .terrace-href {margin-top: 1rem; display: flex; align-items: center; gap: 1rem;}
 .terrace-href a {font-size: 1.8rem; color: var(--txtC4);}
 .terrace-href .terrace-btn {all: unset; width: 2rem; height: 2rem; background: url(../img/Right-c2.svg) no-repeat center;}
+
 /* inspiration 스타일 가이드 배너 */
 .inspiration {height: 108rem; background: url(../img/inspiration.png) no-repeat center;}
-.inspiration .centerbox {height: 100%;}
-.inspiration-wrap {margin-top: 10rem; display: flex; flex-direction: column; gap: 25px;}
+.inspiration .centerbox {height: 100%; box-sizing: border-box; padding: 10rem 0; position: relative;}
+.inspiration-wrap {display: flex; flex-direction: column; gap: 2.5rem; width: fit-content;}
 
+/* inspiration 스타일 가이드 텍스트 */
 .inspiration-subtit {font-size: 2.6rem; font-family: 'Pretendard-Medium'; color: var(--txtC1);}
-.inspiration-tit {color: var(--txtC1);}
-.inspiration-txt {font-size: 2.6rem; color: var(--txtC1); font-family: 'Pretendard-Light';}
+.inspiration-tit {color: var(--txtC1); font-size: 5.5rem; line-height: 130%;}
+.inspiration-txt {font-size: 2.6rem; color: var(--txtC1); line-height: 150%; font-family: 'Pretendard-Light';}
 
-.inspiration .centerbox .btn {margin-top: 5rem; outline: 0.2rem solid var(--pointC4);}
-.inspiration .centerbox .btn:hover {background: var(--pointC4);}
-.inspiration .centerbox .btn a {color: var(--pointC4);}
-.inspiration .centerbox .btn:hover a {color: var(--txtC1);}
+/* inspiration 스타일 가이드 버튼 */
+.inspiration .centerbox .href-btn {position: absolute; top: 40%; transform: translateY(50%); outline-color: var(--pointC4); color: var(--pointC4);}
+.inspiration .centerbox .href-btn:hover {background: var(--pointC4); color: var(--txtC1);}
 
-.sofa-wrap {display: flex; flex-direction: column; gap: 2.5rem; align-items: center;}
-
-.sofa-top {display: flex;}
+/* sofa 소파 - 타이틀 */
+.sofa-wrap {display: flex; flex-direction: column; gap: 2.5rem; align-items: center; margin-bottom: 7.5rem;}
 .sofa-wrap .sofa-tit {font-size: 4rem; font-family: 'Pretendard-Bold'; color: var(--txtC5); text-align: center;}
+.sofa-wrap .sofa-txt {font-size: 2.6rem; font-family: 'Pretendard-Light'; color: var(--txtC7); text-align: center;}
 
+/* sofa 소파 - 신제품 info 배경 */
+.sofa-sec {position: relative; display: flex; flex-direction: column; justify-content: center;
+    height: 105rem; background: var(--mainC1); border-radius:  150rem 150rem 0 0;}
+
+/* sofa 소파 - 신제품 info 제품 콘텐츠 */
+.sofa-contents {display: flex; gap: 7.5rem;}
+.sofa-info {display: flex; flex-direction: column; gap: 2.5rem; align-items: flex-start; justify-content: center;}
+.sofa-right {flex-direction: row-reverse;}
+.sofa-right .sofa-info {align-items: flex-end;}
+
+.sofa-contents:nth-child(1) {position: absolute; top: 5rem; left: -2.5rem;}
+.sofa-contents:nth-child(2) {position: absolute; top: 37.5rem; right: 0;}
+.sofa-contents:nth-child(3) {position: absolute; bottom: -2.5rem; left: -2.5rem;}
+
+/* sofa 소파 - 신제품 info 제품 타이틀, 설명, 가격 */
+.sofa-contents .sofa-top {display: flex; gap: 2.5rem;}
+.sofa-contents .sofa-tit {font-size: 3.2rem; font-family: 'Pretendard-SemiBold'; color: var(--txtC8);}
+.sofa-contents .sofa-txt {font-size: 2rem; color: var(--txtC3); font-family: 'Pretendard-Light';}
+.sofa-contents .sofa-price {font-size: 2.8rem; font-family: 'Pretendard-SemiBold'; color: var(--txtC5);}
+
+/* sofa 소파 - 신제품 info 컬러 */
 .sofa-colors {display: flex; gap: 10px; align-items: center; }
-.sofa-color {width: 2rem; height: 2rem; outline: 1px solid red;}
+.sofa-color {width: 2rem; height: 2rem;}
+.sofa-color a {display: inline-block; width: 2rem; height: 2rem;}
+.sofa-colors .C1 {background: var(--txtC1);}
+.sofa-colors .C2 {background: var(--mainC2);}
+.sofa-colors .C3 {background: var(--txtC4);}
+.sofa-colors .C4 {background: var(--txtC2);}
 
 /*  
 NOTE: @:has(~) - @의 자식요소에 ~가 있으면 적용되는 css
 .sofa-colors > li:has(img) {outline: 1px solid blue;}
 */
 
-.sofa-colors:last-child img {width: 1rem; height: 1rem;}
-.sofa-wrap .sofa-txt {font-size: 2.6rem; font-family: 'Pretendard-Light'; color: var(--txtC7); text-align: center;}
+.sofa-colors:last-child a img {width: 1rem; height: 1rem;}
 
-.sofa-sec {height: 105rem; background: var(--mainC1); border-radius:  150rem 150rem 0 0;}
+/* sofa 소파 - 신제품 info 제품 right 타이틀, 설명, 가격 */
+.sofa-right {text-align: right;}
+
+/* philosophy 오프라인 매장 홍보 */
+.philosophy {height: 50rem; background: var(--mainC3);}
+
+/* philosophy 오프라인 매장 홍보 콘텐츠 */ 
+.philosophy .centerbox {display: flex; align-items: center; justify-content: space-between;}
+
+/* philosophy 오프라인 매장 홍보 텍스트 */ 
+.philosophy-wrap {display: flex; flex-direction: column; gap: 2.5rem; color: var(--mainC1);}
+.philosophy-subtit {font-size: 2.6rem;}
+.philosophy-tit {color: var(--mainC1);}
+.philosophy-txt {font-size: 2.4rem; font-family: 'Pretendard-Light';}
+
+/* map 지도 */
+.map {width: 125rem; display: flex; flex-direction: column; gap: 7.5rem;}
+.map-wrap {display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 2.5rem; text-align: center;}
+
+/* footer */
+footer {background: var(--black); height: 40rem;}
+.footer {height: 100%; display: flex; align-items: center; justify-content: space-between;}
+
+.footer-main .footer-area {display: flex; gap: 10rem; align-items: center; margin-bottom: 7.5rem;}
+.footer-main .footer-area a {color: var(--txtC1); font-size: 1.8rem; font-family: 'Pretendard-Light';}
+.footer-main .footer-area li:nth-child(2) a {font-family: 'Pretendard-Medium';}
+.footer-main .footer-info {font-size: 1.4rem; line-height: 130%; color: var(--txtC1); font-family: 'Pretendard-Light';}
+.footer-main .footer-info .copy {margin-top: 2.5rem;}
+
+.footer-sub {display: flex; flex-direction: column; gap: 2.5rem;}
+.footer-sub .footer-btn {height: 5rem; box-sizing: border-box; outline: 0.2rem solid var(--mainC1); outline-offset: -0.2rem;}
+.footer-sub .infut {display: flex; justify-content: space-between;}
+.footer-sub .infut input {width: 20rem; font-size: 1.6rem; padding: 0 20px; background: none; color: var(--mainC1); border: none;}
+input[type="text"]::placeholder {color: var(--mainC1);}
+.footer-sub .sub {width: 42rem; outline: none; border: none; background: var(--mainC1); cursor: pointer;}
+.footer-sub .sub-txt {font-size: 1.4rem; color: var(--txtC1); font-family: 'Pretendard-Light'; line-height: 130%;}
