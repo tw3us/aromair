@@ -46,11 +46,13 @@ body {width: 100%; background: var(--white);}
 
 /* header 헤더 */
 header {box-shadow: 0 0.5rem 1rem rgb(134, 102, 80, 0.2)}
+
 /* 상단 광고 */
 .toppop {height: 4.2rem; background: var(--mainC2);}
 .toppop .centerbox {height: 100%; display: flex; align-items: center; justify-content: flex-start;}
 .toppop .centerbox > a {font-size: 1.6rem; color: var(--txtC1);}
 .toppop .centerbox > a span {font-family: 'Pretendard-SemiBold';}
+
 /* 상단 로고, 카테고리, 아이콘 */
 .topmenu {height: 7rem; background: var(--white); border-bottom: 0.1rem solid var(--lightgray); box-sizing: border-box;}
 .topmenu .centerbox {height: 100%; display: flex; align-items: center; justify-content: space-between;}
@@ -58,6 +60,7 @@ header {box-shadow: 0 0.5rem 1rem rgb(134, 102, 80, 0.2)}
 .topmenu .centerbox nav .gnb li a {padding: 2.5rem; font-size: 1.8rem; color: var(--mainC2);}
 .topmenu .centerbox nav .gnb li:nth-child(1) a {font-family: 'Pretendard-SemiBold'; color: var(--mainC3);}
 .topmenu .centerbox .icon {display: flex; align-items: center; gap: 2rem;}
+
 /* 세부 카테고리*/
 .topsub {height: 4rem; background: var(--white);}
 .topsub .centerbox {height: 100%; display: flex; justify-content: center; align-items: center;}
