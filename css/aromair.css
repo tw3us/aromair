@@ -41,7 +41,7 @@ h2 {font-size: 4rem; font-family: 'Pretendard-SemiBold'; color: var(--txtC5);}/*
 font-size: 2rem; font-family: 'Pretendard-Regular'; line-height: 2.2rem; background: none; color: var(--pointC3); cursor: pointer;}
 
 /* size */
-body {width: 100%; background: var(--white);}
+body {width: 100%; min-width: 125rem; background: var(--white);}
 .centerbox {width: 125rem; margin: 0 auto;}
 
 /* header 헤더 */
